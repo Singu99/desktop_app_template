@@ -1,0 +1,1 @@
+# Multiplatform desktop app template

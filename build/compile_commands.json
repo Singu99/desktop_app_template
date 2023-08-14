@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/singu/dev/cpp_projects/desktop_app_template/build",
+  "command": "/usr/bin/g++ -g -o CMakeFiles/HelloWorld.dir/main.cpp.o -c /home/singu/dev/cpp_projects/desktop_app_template/main.cpp",
+  "file": "/home/singu/dev/cpp_projects/desktop_app_template/main.cpp"
+}
+]
