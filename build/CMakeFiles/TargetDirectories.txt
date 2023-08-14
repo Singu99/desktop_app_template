@@ -1,3 +1,0 @@
-/home/singu/dev/cpp_projects/desktop_app_template/build/CMakeFiles/HelloWorld.dir
-/home/singu/dev/cpp_projects/desktop_app_template/build/CMakeFiles/edit_cache.dir
-/home/singu/dev/cpp_projects/desktop_app_template/build/CMakeFiles/rebuild_cache.dir
