@@ -1,3 +1,4 @@
+
 // Dear ImGui: standalone example application for GLFW + OpenGL 3, using programmable pipeline
 // (GLFW is a cross-platform general purpose library for handling windows, inputs, OpenGL/Vulkan/Metal graphics context creation, etc.)
 // If you are new to Dear ImGui, read documentation from the docs/ folder + read the top of imgui.cpp.
@@ -32,11 +33,12 @@ static void glfw_error_callback(int error, const char* description)
 }
 
 // Main code
-int main(int, char**)
+void run()
 {
+
     glfwSetErrorCallback(glfw_error_callback);
     if (!glfwInit())
-        return 1;
+        return;
 
     // Decide GL+GLSL versions
 #if defined(IMGUI_IMPL_OPENGL_ES2)
@@ -64,14 +66,14 @@ int main(int, char**)
     // Create window with graphics context
     GLFWwindow* window = glfwCreateWindow(1280, 720, "Dear ImGui GLFW+OpenGL3 example", nullptr, nullptr);
     if (window == nullptr)
-        return 1;
+        return;
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1); // Enable vsync
 
-        // Glad
+    // Glad
     if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
         printf("Failed to initialize OpenGL context");
-        return -1;
+        return;
     }
 
     // Setup Dear ImGui context
@@ -215,6 +217,4 @@ int main(int, char**)
 
     glfwDestroyWindow(window);
     glfwTerminate();
-
-    return 0;
 }

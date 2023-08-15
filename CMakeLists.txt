@@ -12,8 +12,11 @@ set(DEPENDENCIES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/dependencies)
 # All files inside dependencies folder
 file(GLOB_RECURSE LIB_SOURCES ${DEPENDENCIES_DIR}/glad/src/*.c)
 
+# Application sources
+file(GLOB APP_SOURCES CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
+
 # Add Executable
-add_executable(HelloWorld main.cpp ${LIB_SOURCES})
+add_executable(HelloWorld ${APP_SOURCES} ${LIB_SOURCES})
 
 #################### CPM ####################
 
