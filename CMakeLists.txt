@@ -48,4 +48,7 @@ target_include_directories(HelloWorld SYSTEM PRIVATE ${glfw_SOURCE_DIR}/include)
 target_include_directories(HelloWorld SYSTEM PRIVATE ${DEPENDENCIES_DIR}/glad/include)
 
 # link dependencies
+target_include_directories(imgui PRIVATE ${glfw_SOURCE_DIR}/include)
+
+# main app
 target_link_libraries(HelloWorld fmt::fmt nlohmann_json::nlohmann_json Catch2::Catch2WithMain glfw imgui)

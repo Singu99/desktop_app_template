@@ -63,9 +63,12 @@ jobs:
     ## Step to install dependencies:
     - name: Install dependencies
       run: sudo apt-get install xorg-dev libglu1-mesa-dev
-    
-      
 
+    ## Update submodules
+    - name: Update submodules
+      run: git submodule update --init --recursive
+      shell: git
+      
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Autobuild
