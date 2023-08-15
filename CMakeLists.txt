@@ -15,6 +15,7 @@ file(GLOB_RECURSE LIB_SOURCES ${DEPENDENCIES_DIR}/glad/src/*.c)
 # Add Executable
 add_executable(HelloWorld main.cpp ${LIB_SOURCES})
 
+#################### CPM ####################
 
 # add dependencies
 include(cmake/CPM.cmake)
@@ -34,6 +35,10 @@ CPMAddPackage(
         "GLFW_BUILD_EXAMPLES OFF"
 )
 
+#################### Dependencies ####################
+add_subdirectory(${DEPENDENCIES_DIR}/imgui)
+
+
 # specify the include directories for your app and its dependencies
 target_include_directories(HelloWorld PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_include_directories(HelloWorld SYSTEM PRIVATE ${fmt_SOURCE_DIR}/include)
@@ -43,4 +48,4 @@ target_include_directories(HelloWorld SYSTEM PRIVATE ${glfw_SOURCE_DIR}/include)
 target_include_directories(HelloWorld SYSTEM PRIVATE ${DEPENDENCIES_DIR}/glad/include)
 
 # link dependencies
-target_link_libraries(HelloWorld fmt::fmt nlohmann_json::nlohmann_json Catch2::Catch2WithMain glfw)
+target_link_libraries(HelloWorld fmt::fmt nlohmann_json::nlohmann_json Catch2::Catch2WithMain glfw imgui)
