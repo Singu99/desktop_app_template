@@ -71,7 +71,11 @@ function(dektop_app_setup_dependencies)
                 "GLFW_BUILD_TESTS OFF"
                 "GLFW_BUILD_EXAMPLES OFF"
         )
+
+        target_include_directories(glfw PRIVATE ${glfw_SOURCE_DIR}/include)
+    
     endif()
+
 
     # Git submodules
     set(GIT_SUBMODULES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/dependencies)

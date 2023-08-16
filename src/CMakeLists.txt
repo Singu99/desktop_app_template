@@ -24,6 +24,6 @@ target_link_system_libraries(
         Catch2
         fmt::fmt)
 
-target_include_directories(glfw PRIVATE ${glfw_SOURCE_DIR}/include)
+target_include_directories(dektop_app PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 # target_include_directories(dektop_app PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
