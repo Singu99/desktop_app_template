@@ -85,5 +85,5 @@ function(dektop_app_setup_dependencies)
     # Dependencies source code
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/dependencies/glad ${CMAKE_CURRENT_BINARY_DIR}/glad)
 
-
+ 
 endfunction()
