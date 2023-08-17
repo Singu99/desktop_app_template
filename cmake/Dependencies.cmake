@@ -80,7 +80,7 @@ function(dektop_app_setup_dependencies)
     # Git submodules
     set(GIT_SUBMODULES_DIR ${CMAKE_CURRENT_SOURCE_DIR}/dependencies)
     add_subdirectory(${GIT_SUBMODULES_DIR}/imgui ${CMAKE_CURRENT_BINARY_DIR}/imgui)
-    target_include_directories(imgui PRIVATE ${glfw_SOURCE_DIR})
+    target_include_directories(imgui PUBLIC ${glfw_SOURCE_DIR})
 
     # Dependencies source code
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/dependencies/glad ${CMAKE_CURRENT_BINARY_DIR}/glad)
